@@ -1,8 +1,4 @@
-import {
-  ACTIONS_CORS_HEADERS,
-  ActionsJson,
-  createActionHeaders,
-} from "@solana/actions";
+import { ActionsJson, createActionHeaders } from "@solana/actions";
 
 export const GET = async () => {
   const payload: ActionsJson = {
