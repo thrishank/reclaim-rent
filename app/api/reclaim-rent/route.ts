@@ -19,9 +19,12 @@ export async function GET(req: Request) {
   const payload: ActionGetResponse = {
     type: "action",
     title: "Reclaim Rent",
-    description: "Reclaim your rent by closing unwanted token accounts",
+    description: `Reclaim your rent by closing empty token accounts.
+      When you buy a token, a token account is created for you. 
+      Once you have dumped the token the rent is still stored in the wallet. 
+      This blink will close all empty token accounts and reclaim the rent with 0% fees.`,
     icon: img_url,
-    label: "hello",
+    label: "claim",
     links: {
       actions: [
         {
