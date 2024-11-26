@@ -48,7 +48,9 @@ export async function POST(req: Request) {
   try {
     const body: ActionPostRequest = await req.json();
     const account = new PublicKey(body.account);
+    const api_key = process.env.API_KEY;
 
+    console.log("API KEY", api_key);
     const { blockhash, lastValidBlockHeight } =
       await connection.getLatestBlockhash();
 
