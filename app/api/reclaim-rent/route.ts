@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     const spl_token = await create_close_instruction(account, TOKEN_PROGRAM_ID);
     const token_2022 = await create_close_instruction(
       account,
-      TOKEN_2022_PROGRAM_ID,
+      TOKEN_2022_PROGRAM_ID
     );
 
     spl_token.forEach((instruction) => tx.add(instruction));
