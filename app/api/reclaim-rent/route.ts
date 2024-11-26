@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     const account = new PublicKey(body.account);
     const api_key = process.env.API_KEY;
 
-    console.log("API KEY", api_key);
+    console.log(`https://mainnet.helius-rpc.com/?api-key=${api_key}`);
     const { blockhash, lastValidBlockHeight } =
       await connection.getLatestBlockhash();
 
