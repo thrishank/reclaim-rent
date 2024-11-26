@@ -6,7 +6,7 @@ const api_key = process.env.API_KEY;
 
 export const connection = new Connection(
   `https://mainnet.helius-rpc.com/?api-key=${api_key}`,
-  "confirmed",
+  "confirmed"
 );
 
 export const accountExceptions = [

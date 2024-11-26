@@ -41,16 +41,15 @@ export async function OPTIONS() {
 }
 
 // Things to do
-// 1. Transaction compute units limit
-// 2. Find the total number of accounts that can be closed while ensuring the transaction succeeds
+// 1. learn about compute units limit and other limits
+// 2. Find the total number of accounts that can be closed in a single transaction while ensuring the transaction succeeds
+// 3. Add analytics -> total sol reclaimed, total ata accounts closed, total owner accounts participated
 
 export async function POST(req: Request) {
   try {
     const body: ActionPostRequest = await req.json();
     const account = new PublicKey(body.account);
-    const api_key = process.env.API_KEY;
 
-    console.log(`https://mainnet.helius-rpc.com/?api-key=${api_key}`);
     const { blockhash, lastValidBlockHeight } =
       await connection.getLatestBlockhash();
 
